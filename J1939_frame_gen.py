@@ -34,7 +34,7 @@ def send_one():
         rnd_num = -1*100 + (value * (100 - (-1*100)))
 
         speed = int(speed + rnd_num)
-        hex_num = hex(speed)
+        hex_num = hex(256*speed)
         hex_num = hex_num[2:6]
         byte_2 = hex_num[0:2]
         byte_3 = hex_num[2:4]
@@ -47,7 +47,7 @@ def send_one():
         except can.CanError:
             print("Message NOT sent")
             
-        time.sleep(0.01)
+        time.sleep(0.1)
         
 
 if __name__ == '__main__':

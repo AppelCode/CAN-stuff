@@ -38,7 +38,7 @@ def send_one():
 
         try:
             bus.send(msg)
-            #print("Message sent on {}".format(bus.channel_info))
+            print("Message sent on {}".format(bus.channel_info))
         except can.CanError:
             print("Message NOT sent")
             
